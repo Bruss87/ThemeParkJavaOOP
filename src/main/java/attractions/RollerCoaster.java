@@ -12,11 +12,7 @@ public class RollerCoaster  extends Attraction implements ISecurity, IReviewed, 
     }
 
     public boolean isAllowedTo(Visitor visitor) {
-        if (visitor.getAge() > 12) { return true;}
-        else if (visitor.getHeight() > 145){
-            return true;
-        }
-        return false;
+        return visitor.getAge() > 12 && visitor.getHeight() > 145;
     }
 
     public double defaultPrice() {
